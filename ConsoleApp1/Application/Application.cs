@@ -328,7 +328,7 @@ namespace ConsoleApp1
                                     }
 
                                 }
-                                else if (choice1_2 == 3)
+                                else if (choice1_2 == 2)
                                 {
                                     Console.Clear();
                                     Console.WriteLine("Enter a summary:");
