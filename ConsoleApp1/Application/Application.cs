@@ -28,7 +28,6 @@ namespace ConsoleApp1
                         "Exit"
                         );
 
-
                 switch (choice)
                 {
                     case 0:
@@ -110,6 +109,7 @@ namespace ConsoleApp1
                                 var choice1_2 = Actions.Choose("CHOOSE AN ACTION:\n", "Filter by Priority", "Filter by Status", "Filter by Summary");
                                 if (choice1_2 == 0)
                                 {
+                                    Console.Clear();
                                     var choice1_2_2 = Actions.Choose("\n\nChoose priority:", "Low", "Medium", "High", "Critical");
                                     if(choice1_2_2 == 0)
                                     {
@@ -131,7 +131,8 @@ namespace ConsoleApp1
                                     
                                 else if(choice1_2 == 1)
                                 {
-                                    var choice1_2_3 = Actions.Choose("\n\nChoose status:", "Low", "Medium", "High", "Critical");
+                                    Console.Clear();
+                                    var choice1_2_3 = Actions.Choose("\n\nChoose status:", "New", "InProgress", "Failed", "Done");
                                     if (choice1_2_3 == 0)
                                     {
                                         testCases.FilterIssues("Status", "New");
@@ -152,7 +153,8 @@ namespace ConsoleApp1
                                 }
                                 else if(choice1_2 == 3)
                                 {
-                                    Console.WriteLine("Enter a word or phrase in the summary:");
+                                    Console.Clear();
+                                    Console.WriteLine("Enter a summary:");
                                     testCases.FilterIssues("Summary", Console.ReadLine());
                                 }
                             }
@@ -163,9 +165,7 @@ namespace ConsoleApp1
                             }
 
                         }
-
                         break;
-
                     case 3:
                         Console.Clear();
                         if (testCases.Count == 0)
@@ -281,13 +281,60 @@ namespace ConsoleApp1
                                 }
 
                             }
-
                             else if (choice1 == 1)
                             {
                                 Console.Clear();
                                 var choice1_2 = Actions.Choose("CHOOSE AN ACTION:\n", "Filter by Priority", "Filter by Status", "Filter by Summary");
+                                if (choice1_2 == 0)
+                                {
+                                    Console.Clear();
+                                    var choice1_2_2 = Actions.Choose("\n\nChoose priority:", "Low", "Medium", "High", "Critical");
+                                    if (choice1_2_2 == 0)
+                                    {
+                                        bugs.FilterIssues("Priority", "Low");
+                                    }
+                                    else if (choice1_2_2 == 1)
+                                    {
+                                        bugs.FilterIssues("Priority", "Medium");
+                                    }
+                                    else if (choice1_2_2 == 2)
+                                    {
+                                        bugs.FilterIssues("Priority", "High");
+                                    }
+                                    else if (choice1_2_2 == 3)
+                                    {
+                                        bugs.FilterIssues("Priority", "Critical");
+                                    }
+                                }
+                                else if (choice1_2 == 1)
+                                {
+                                    Console.Clear();
+                                    var choice1_2_3 = Actions.Choose("\n\nChoose status:", "New", "InProgress", "Failed", "Done");
+                                    if (choice1_2_3 == 0)
+                                    {
+                                        bugs.FilterIssues("Status", "New");
+                                    }
+                                    else if (choice1_2_3 == 1)
+                                    {
+                                        bugs.FilterIssues("Status", "InProgress");
+                                    }
+                                    else if (choice1_2_3 == 2)
+                                    {
+                                        bugs.FilterIssues("Status", "Failed");
+                                    }
+                                    else if (choice1_2_3 == 3)
+                                    {
+                                        bugs.FilterIssues("Status", "Done");
+                                    }
 
-                            }
+                                }
+                                else if (choice1_2 == 3)
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Enter a summary:");
+                                    bugs.FilterIssues("Summary", Console.ReadLine());
+                                }
+                            }                       
                             else if (choice1 == 2)
                             {
                                 Console.Clear();
@@ -344,8 +391,7 @@ namespace ConsoleApp1
                         }
                         break;
                     case 9:
-                        return;
-                        
+                        return;                       
                 }
             }
         }

@@ -12,14 +12,12 @@ namespace ConsoleApp1
         public int Number { get;}
         public string Action { get; set; }
         public string Result { get; set; }
-
-        
+       
         public Step()
         {
             Number = numberCounter++;
 
         }
-
 
         public string Show()
         {        

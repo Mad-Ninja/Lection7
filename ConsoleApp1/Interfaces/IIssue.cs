@@ -8,7 +8,6 @@ namespace ConsoleApp1
 {
     public interface IIssue
     {
-
         public long Id { get; }
         public DateTime CreationDate{ get; }
         public Priority Priority { get; set; }

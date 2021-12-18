@@ -25,8 +25,6 @@ namespace ConsoleApp1
 
         public Status Status { get; set; }
 
-        
-
         public Issue()
         {
             Id = idCounter++;

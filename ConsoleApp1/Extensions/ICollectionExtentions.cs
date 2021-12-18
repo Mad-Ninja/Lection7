@@ -55,7 +55,6 @@ namespace ConsoleApp1
         public static  void SortIssues<T>(this IList<T> issues, string orderBy, int dest)
             where T : Issue
         {
-
             Console.Clear();
             if (orderBy == "Priority")
 
@@ -87,10 +86,60 @@ namespace ConsoleApp1
         }
 
         public static void FilterIssues<T>(this ICollection<T> issues, string filterBy, string value)
+            where T : Issue
         {
-
+            Console.Clear();
+            if (filterBy == "Priority")
+            {
+                if(value == "Low")
+                {
+                    var result = issues.Where(x => x.Priority == Priority.Low);
+                    result.ToList().ShowAll();
+                }
+                if (value == "Medium")
+                {
+                    var result = issues.Where(x => x.Priority == Priority.Medium);
+                    result.ToList().ShowAll();
+                }
+                if (value == "High")
+                {
+                    var result = issues.Where(x => x.Priority == Priority.High);
+                    result.ToList().ShowAll();
+                }
+                if (value == "Critical")
+                {
+                    var result = issues.Where(x => x.Priority == Priority.Critical);
+                    result.ToList().ShowAll();
+                }
+            }
+            if(filterBy == "Status")
+            {
+                if (value == "New")
+                {
+                    var result = issues.Where(x => x.Status == Status.New);
+                    result.ToList().ShowAll();
+                }
+                if (value == "InProgress")
+                {
+                    var result = issues.Where(x => x.Status == Status.InProgress);
+                    result.ToList().ShowAll();
+                }
+                if (value == "Failed")
+                {
+                    var result = issues.Where(x => x.Status == Status.Failed);
+                    result.ToList().ShowAll();
+                }
+                if (value == "Done")
+                {
+                    var result = issues.Where(x => x.Status == Status.Done);
+                    result.ToList().ShowAll();
+                }
+            }
+            if(filterBy == "Summary")
+            {
+                var result = issues.Where(x => x.Summary == value);
+            }
         }
-
 
         public static void  RunTestCaseById(this ICollection<TestCase> testCases, long id)
         {

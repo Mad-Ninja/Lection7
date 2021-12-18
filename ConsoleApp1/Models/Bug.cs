@@ -10,7 +10,6 @@ namespace ConsoleApp1
     public class Bug : Issue
     {
         
-
         public long? TestCaseId  { get; set; }
         public int? StepNumber { get; set; }
         public string ActualResult { get; set; }
@@ -54,8 +53,7 @@ namespace ConsoleApp1
                 {
                     Console.Clear();
                     Console.WriteLine("Incorrect Actual Result\n");
-                }
-                             
+                }                           
             }
             Console.Clear();
 
