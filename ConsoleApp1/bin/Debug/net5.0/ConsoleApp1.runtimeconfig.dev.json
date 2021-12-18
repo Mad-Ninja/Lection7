@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\sharo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\sharo\\.nuget\\packages"
+    ]
+  }
+}
