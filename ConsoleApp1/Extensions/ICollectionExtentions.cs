@@ -138,6 +138,7 @@ namespace ConsoleApp1
             if(filterBy == "Summary")
             {
                 var result = issues.Where(x => x.Summary == value);
+                result.ToList().ShowAll();
             }
         }
 

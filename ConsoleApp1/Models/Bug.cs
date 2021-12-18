@@ -27,7 +27,7 @@ namespace ConsoleApp1
                 $"Test Case Id: {TestCaseId}",
                 $"\nStep Number: {StepNumber}",
                 $"\nActual Result: {ActualResult}",
-                $"\nExpected Result: {ExpectedResult}\n"));
+                $"\nExpected Result: {ExpectedResult}\n\n\n"));
         }
 
         public  void Fill(long id, int stNumber, string stepResult, string steps, string TcPrec)

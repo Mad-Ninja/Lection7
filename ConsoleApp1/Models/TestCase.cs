@@ -28,7 +28,7 @@ namespace ConsoleApp1
 
             base.Show();
 
-            Console.WriteLine(string.Concat($"Steps:\n{steps}\n"));
+            Console.WriteLine(string.Concat($"Steps:\n{steps}\n\n\n"));
         }
 
         public override void Fill()
